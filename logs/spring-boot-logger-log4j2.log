@@ -1,0 +1,16 @@
+2022-12-20 14:47:40,688 INFO o.s.b.StartupInfoLogger [main] Starting DemoApplication using Java 11.0.13 on LAPTOP-71U36HDH with PID 71916 (C:\ANDRZEJ\JAVA\2023_APP\demo\target\classes started by Andrzej in C:\ANDRZEJ\JAVA\2023_APP\demo)
+2022-12-20 14:47:40,698 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-12-20 14:47:41,263 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-12-20 14:47:41,275 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-12-20 14:47:41,276 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2022-12-20 14:47:41,276 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-20 14:47:41,385 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-12-20 14:47:41,385 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 634 ms
+2022-12-20 14:47:41,583 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-12-20 14:47:41,596 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-20 14:47:41,605 INFO o.s.b.StartupInfoLogger [main] Started DemoApplication in 1.323 seconds (JVM running for 2.102)
+2022-12-20 14:47:55,646 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-20 14:47:55,646 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-12-20 14:47:55,647 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-12-20 14:47:56,538 INFO c.e.d.c.MainController [http-nio-8080-exec-1] Komunikat 1
+2022-12-20 14:47:56,539 INFO c.e.d.c.MainController [http-nio-8080-exec-1] Komunikat 2

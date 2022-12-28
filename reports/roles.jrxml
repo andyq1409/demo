@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="roles" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e976fc40-d6c4-494f-ab2a-bfd53052955b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AQ ORACLE"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="P_USR_ID" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[4]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT 
+   USR_ID, ROLE, DATA_OD, 
+   DATA_DO, ID_USR_ROLE
+FROM AQ.AQ_USER_ROLE
+where usr_id =$P{P_USR_ID}
+and sysdate between data_od and nvl(data_do,sysdate+1)
+]]>
+	</queryString>
+	<field name="USR_ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="USR_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="USR_ID"/>
+	</field>
+	<field name="ROLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ROLE"/>
+		<property name="com.jaspersoft.studio.field.label" value="ROLE"/>
+	</field>
+	<field name="DATA_OD" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DATA_OD"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATA_OD"/>
+	</field>
+	<field name="DATA_DO" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DATA_DO"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATA_DO"/>
+	</field>
+	<field name="ID_USR_ROLE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="ID_USR_ROLE"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID_USR_ROLE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="47" y="0" width="243" height="15" uuid="0e91ff56-2a0a-4363-afc5-605aa56b42f9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ROLE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

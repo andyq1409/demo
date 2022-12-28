@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="79a2a0cf-2d0c-4d80-9417-ad9eb95bc3e2">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AQ ORACLE"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="RESOURCE_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from aq_user]]>
+	</queryString>
+	<field name="USERID" class="java.lang.Integer"/>
+	<field name="LOGIN" class="java.lang.String"/>
+	<field name="PASSWD" class="java.lang.String"/>
+	<field name="FIRSTNAME" class="java.lang.String"/>
+	<field name="LASTNAME" class="java.lang.String"/>
+	<field name="STARTDATE" class="java.sql.Timestamp"/>
+	<field name="ENDDATE" class="java.sql.Timestamp"/>
+	<field name="DESCRIPTION" class="java.lang.String"/>
+	<field name="ACCOUNTLOCKED" class="java.lang.String"/>
+	<field name="PASSWORDDATE" class="java.sql.Timestamp"/>
+	<field name="CREATEDBY" class="java.math.BigDecimal"/>
+	<field name="CREATEDDATE" class="java.sql.Timestamp"/>
+	<field name="MODIFYBY" class="java.math.BigDecimal"/>
+	<field name="MODIFYDATE" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="26" width="118" height="21" uuid="4f4046f2-9dc8-4889-b7a7-e582967812ac"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Raport USERS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="626dcb6c-d3ca-4d20-a55d-aac4e2aa7141"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="0" width="42" height="15" uuid="3e2f3a66-c02e-4238-b156-ba6c1e32a8d5"/>
+				<text><![CDATA[USERID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="1" width="100" height="15" uuid="268b7d18-a6bf-4d5c-b374-15748c5da323"/>
+				<text><![CDATA[FIRSTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="0" width="100" height="15" uuid="8ce9ddf2-42f1-4e2e-afd8-622935ad10b0"/>
+				<text><![CDATA[LASTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="100" height="15" uuid="b25f5336-2325-4583-95e7-0e5f2f255c74"/>
+				<text><![CDATA[STARTDATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="0" width="100" height="15" uuid="15f9ae59-c88d-48d3-a61f-f96fb469cf77"/>
+				<text><![CDATA[LOGIN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="15" width="538" height="1" uuid="3daa924d-8a70-4dd0-8a49-116681bbad36"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="0" width="42" height="15" uuid="f43c7ed2-a99c-4d74-a675-ea991808c2a7"/>
+				<textFieldExpression><![CDATA[$F{USERID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="0" width="100" height="15" uuid="dd731a8d-1c8f-46cf-9c22-79a1eb68ef9c"/>
+				<textFieldExpression><![CDATA[$F{FIRSTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="1" width="100" height="15" uuid="35223c14-acec-4062-9eb6-b1bdd5831c37"/>
+				<textFieldExpression><![CDATA[$F{LASTNAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy-MM-dd" isBlankWhenNull="true">
+				<reportElement x="420" y="1" width="100" height="15" uuid="a22f84c0-adae-49d2-a623-a34b73517030"/>
+				<textFieldExpression><![CDATA[$F{STARTDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="0" width="100" height="15" uuid="9ef13d98-21d7-4252-97e6-5b464cea9145"/>
+				<textFieldExpression><![CDATA[$F{LOGIN}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="16" width="555" height="24" uuid="c4974c9a-6d31-4292-9c95-0035a7399b1e">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<subreportParameter name="P_USR_ID">
+					<subreportParameterExpression><![CDATA[$F{USERID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{RESOURCE_DIR} + "roles.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="26" y="23" width="100" height="20" uuid="a541f3a3-8606-4941-ac90-fe85cc94c5de"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="23" width="100" height="20" uuid="9d5e21e4-80d3-4df6-8f5a-bef28eaaccc0"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

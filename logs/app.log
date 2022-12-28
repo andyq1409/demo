@@ -1,0 +1,9 @@
+2022-12-20 14:15:18,461 INFO c.e.d.DemoApplication [main] Starting DemoApplication using Java 11.0.13 on LAPTOP-71U36HDH with PID 55780 (C:\ANDRZEJ\JAVA\2023_APP\demo\target\classes started by Andrzej in C:\ANDRZEJ\JAVA\2023_APP\demo)
+2022-12-20 14:15:18,468 INFO c.e.d.DemoApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-12-20 14:15:19,516 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2022-12-20 14:15:19,516 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-20 14:15:19,651 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2022-12-20 14:15:19,976 INFO c.e.d.DemoApplication [main] Started DemoApplication in 2.057 seconds (JVM running for 3.499)
+2022-12-20 14:16:24,201 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-20 14:16:26,296 INFO c.e.d.c.MainController [http-nio-8080-exec-1] Komunikat 1
+2022-12-20 14:16:26,296 INFO c.e.d.c.MainController [http-nio-8080-exec-1] Komunikat 2
